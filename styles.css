@@ -16,6 +16,10 @@
   height: 100vh;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 /* Banner  */
 .carousel-starter {
   height: 534px;

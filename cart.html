@@ -44,9 +44,9 @@
                         <td style="height: 78px;">
                             <div class="h-100 d-flex justify-content-center align-items-center">
                                 <div class="input-group" style="width: 124px;">
-                                    <span class="input-group-text">+</span>
-                                    <input type="text" class="form-control text-center" value="1">
-                                    <span class="input-group-text">-</span>
+                                    <span class="input-group-text cursor-pointer" onclick="increaseValue()">+</span>
+                                    <input type="number" class="form-control text-center" value="1" id="numberInput">
+                                    <span class="input-group-text cursor-pointer" onclick="decreaseValue()">-</span>
                                 </div>
                             </div>
                         </td>
@@ -81,6 +81,33 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function increaseValue() {
+            // Lấy giá trị hiện tại từ input
+            var inputValue = parseInt(document.getElementById('numberInput').value);
+
+            // Tăng giá trị lên 1
+            inputValue++;
+
+            // Cập nhật giá trị mới vào input
+            document.getElementById('numberInput').value = inputValue;
+        }
+
+        function decreaseValue() {
+            // Lấy giá trị hiện tại từ input
+            var inputValue = parseInt(document.getElementById('numberInput').value);
+
+            // Giảm giá trị đi 1 (nhưng không cho phép giảm xuống dưới 0)
+            if (inputValue > 0) {
+                inputValue--;
+            }
+
+            // Cập nhật giá trị mới vào input
+            document.getElementById('numberInput').value = inputValue;
+        }
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
