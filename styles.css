@@ -219,3 +219,13 @@ input[type="range"]::-moz-range-thumb {
   padding-left: 14px;
 }
 /* end section  */
+
+/* css content for single product  */
+
+.detail-img {
+  width: 100%;
+  aspect-ratio: 3/3.2;
+  object-fit: cover;
+}
+
+/* end section  */
